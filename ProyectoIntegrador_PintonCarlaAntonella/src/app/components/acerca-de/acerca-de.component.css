@@ -2,13 +2,16 @@
     padding: 20px;
 }
 div {
-    background-color: #a1b5cb;
+    background-color: #eb02b8;
     text-align: center;
 }
 
 #nombre {
     font-weight: bold;
     margin-top: 30%;
+}
+p, h1 {
+    color: whitesmoke;
 }
 
 @media (min-width: 576px){

@@ -18,8 +18,12 @@ width: auto;
 
 .btn {
     margin-right: 2rem;
-    background-color: #000000;
 }
+
 div {
     padding: 15px;
+}
+
+* {
+    color: whitesmoke;
 }

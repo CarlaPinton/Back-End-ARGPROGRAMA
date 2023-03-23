@@ -28,10 +28,10 @@ p, h1 {
 @media (max-width: 575px){
         #fotodeperfil {
             position: absolute;
-            width: 30%;
+            width: 35%;
             border-radius: 100%;
             box-shadow: 3px 3px 3px grey;
             left: 33%;
-            top: 630px;
+            top: 680px;
         }
 }

@@ -1,14 +1,29 @@
-<div class="row"> 
-    <h1> Educación </h1>
-    <div class="col-lg-1"></div>
+<div class="row">
+    <h1>Educacion</h1>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaeduc" *ngIf="isLogged">
+            Agregar Educacion
+        </button>
+    </div>
+    <div class="col lg 1"></div>
     <div class="col-lg-11">
-        <ul>
-            <li>Bachiller con orientación en Ciencias Sociales - 
-                Instituto Sagrada Familia, Cosquin. Finalizado en 2016.</li>
-            <li>Estudiante de Técnico Superior en Guía de Turismo - Instituto Superior Arturo Umberto Illia,
-                Villa Carlos Paz.</li>
-            <li> Primeros pasos en el desarrollo Front-End - Argentina Programa 4.0. Finalizado en 2023.</li>
-            <li>Estudiante de Programación. Argentina Programa.</li>
-        </ul>
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Educacion of educacion">
+                    <td>
+                        <h2>{{Educacion.nombreE}}</h2>
+                    </td>
+                    <td>{{Educacion.descripcionE}}</td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
+                            <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-danger" (click)="delete(Educacion.id)">
+                            <i class="bi bi-trash-fill"></i> BORRAR</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>

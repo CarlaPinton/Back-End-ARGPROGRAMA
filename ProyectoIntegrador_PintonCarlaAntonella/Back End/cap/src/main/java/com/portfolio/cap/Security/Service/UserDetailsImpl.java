@@ -22,12 +22,6 @@ public class UserDetailsImpl implements UserDetailsService {
     @Autowired
     UsuarioService usuarioService;
 
-    /**
-     *
-     * @param nombreUsuario
-     * @return
-     * @throws UsernameNotFoundException
-     */
     @Override
     public UserDetails loadUserByUsername(String nombreUsuario) throws UsernameNotFoundException {
        Usuario usuario = usuarioService.getByNombreUsuario(nombreUsuario).get();
